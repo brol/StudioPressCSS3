@@ -17,8 +17,8 @@ $core->addBehavior('publicHeadContent','studiopresscss3menu_publicHeadContent');
 function studiopresscss3menu_publicHeadContent($core)
 {
 	$style = $core->blog->settings->themes->studiopresscss3_menu;
-	if (!preg_match('/^menu-no|menufreshy|simplemenu$/',$style)) {
-		$style = 'menufreshy';
+	if (!preg_match('/^menufreshy|simplemenu|menu-no$/',$style)) {
+		$style = 'simplemenu';
 	}
 
 	$url = $core->blog->settings->themes_url.'/'.$core->blog->settings->theme;

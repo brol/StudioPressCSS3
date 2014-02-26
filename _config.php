@@ -14,13 +14,13 @@ l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
 
 // affichage du type de menu
 $studiopresscss3_menus = array(
-	__('none') => 'menu-no',
+	__('simpleMenu') => 'simplemenu',
 	__('menuFreshy or menu (Adjaya)') => 'menufreshy',
-	__('simpleMenu') => 'simplemenu'
+	__('none') => 'menu-no'
 );
 
 if (!$core->blog->settings->themes->studiopresscss3_menu) {
-	$core->blog->settings->themes->studiopresscss3_menu = 'menufreshy';
+	$core->blog->settings->themes->studiopresscss3_menu = 'simplemenu';
 }
 
 if (!empty($_POST['studiopresscss3_menu']) && in_array($_POST['studiopresscss3_menu'],$studiopresscss3_menus))
@@ -183,7 +183,7 @@ form::combo('studiopresscss3_inserttop',$studiopresscss3_inserttops,$core->blog-
 '</p>';
 
 #top insert
-$html_filetop = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-pubcentrale.html';
+$html_filetop = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-inserttop.html';
 
 if (!is_file($html_filetop) && !is_writable(dirname($html_filetop))) {
 	throw new Exception(
@@ -229,7 +229,7 @@ form::combo('studiopresscss3_insertright',$studiopresscss3_insertrights,$core->b
 '</p>';
 
 #right insert
-$html_fileright = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-pubdroite.html';
+$html_fileright = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-insertright.html';
 
 if (!is_file($html_fileright) && !is_writable(dirname($html_fileright))) {
 	throw new Exception(

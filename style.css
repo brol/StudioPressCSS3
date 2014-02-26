@@ -672,4 +672,5 @@ cite { }
 
 #attachments {padding-left:10px;}
 #attachments ul {margin:0 0 0 20px;}
-#attachments li {margin: 3px 0; list-style: none;}
+#attachments li {margin: 3px 0; list-style: none;font-size:0.8em;padding: 2px 0;}
+#attachments li.audio object {margin:0;vertical-align:bottom;}
