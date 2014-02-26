@@ -1,0 +1,28 @@
+<div id="top">
+  <form method="get" id="searchform" action="{{tpl:BlogURL}}">
+    <p>
+			<input type="text" value="" name="q" id="searchbox" />
+			<input type="submit" id="searchbutton" value="{{tpl:lang Search}}" />
+    </p>
+	</form>
+<!-- # --BEHAVIOR-- publicTopAfterContent -->
+{{tpl:SysBehavior behavior="publicTopAfterContent"}}
+<p id="prelude"><a href="#main">{{tpl:lang To content}}</a> | <a href="#blognav">{{tpl:lang To menu}}</a></p>
+
+<div id="underheader">
+<div id="toprss">
+  <p><a href="{{tpl:BlogFeedURL type="atom"}}" title="{{tpl:lang Entries feed}}">{{tpl:lang Subscribe<br />to RSS}}
+  </a></p>
+</div>
+<h1><a href="{{tpl:BlogURL}}">{{tpl:BlogName encode_html="1"}}</a></h1>
+<p class="sitedesc">{{tpl:BlogDescription encode_html="1"}}</p>
+</div>
+
+<div id="nav">
+{{tpl:MenuFreshy}}
+</div> <!-- Closes Nav -->
+
+<div id="navsm">
+{{tpl:SimpleMenu id="supranav" description="title"}}
+</div>
+</div>

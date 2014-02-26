@@ -1,0 +1,150 @@
+/*
+# ***** BEGIN LICENSE BLOCK *****
+#
+#  	StudioPressCSS3
+#  	Theme by Pierre Van Glabeke
+#   original WP theme: http://www.dailyblogtips.com/wordpress-themes
+#   License : http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+#
+# ***** END LICENSE BLOCK *****
+*/
+
+/* orange */
+
+/* Reset Defaults Starts */
+
+a {
+  color: #ca5e1b;
+}
+a:hover {
+  color: #edb379;
+}
+blockquote {
+  background-color: #E9E9E9;
+  border: 1px solid #3F693F;
+}
+
+/* Reset Defaults Ends */
+
+body {
+  background: #656565 url(../../images/orange/bgbody.jpg) repeat-x top left;
+}
+#searchbutton {
+  background: #ca5e1b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ca5e1b 0%, #edb379 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ca5e1b), color-stop(100%,#edb379)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ca5e1b 0%,#edb379 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca5e1b', endColorstr='#edb379',GradientType=0 ); /* IE6-8 */
+}
+#underheader h1 a:hover {
+  color: #edb379;
+}
+#underheader .sitedesc {
+  color: #ca5e1b;
+}
+#underheader #toprss {
+  background: transparent url(../../images/orange/rssbig.png) right top no-repeat;
+  text-align:left;
+}
+#prelude a:hover, #underheader #toprss a:hover {
+  color: #edb379;
+}
+
+/* Main content */
+
+#content .pageTitle {
+  color: #ca5e1b;
+}
+.sepbil {
+	border-bottom: 1px dashed #ca5e1b;
+}
+.commentlist li {
+  background: #edb379;
+}
+.commentlist cite a {
+}
+.navigation {
+  color: #406E8D;
+}
+
+/* Start of sidebar */
+#welcome a {
+  color: #DE9952;
+}
+#welcome p {
+  background: url(../../images/orange/welcome.gif) left top no-repeat;
+}
+
+/* Sidebar 2 columns widget-ready */
+.sidebarsB h2 {
+  background: #ca5e1b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ca5e1b 0%, #edb379 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ca5e1b), color-stop(100%,#edb379)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ca5e1b 0%,#edb379 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca5e1b', endColorstr='#edb379',GradientType=0 ); /* IE6-8 */
+}
+.sidebarsB li {
+  background: url(../../images/orange/bullet.gif) left 6px no-repeat;
+}
+.sidebarsB a {
+}
+.sidebarsB a:hover {
+  color: #D47414;
+}
+
+/* Footer */
+#footer a {
+  color: #edb379;
+}
+
+/* html par defaut pour les billets */
+pre { background : #edb379;}
+
+/* ------------------------------------------------------------
+	7. COMMENTAIRES, PINGS (version initiale Kozlika)
+------------------------------------------------------------- */
+
+#comments dt.me { color : #ca5e1b;}
+#comments dd.me { color : #ca5e1b;background-color:#edb379;}
+.field input { background : #edb379;}
+.field textarea {background : #edb379;}
+
+.form-help { color : #ca5e1b; }
+.dc-category #subcategories li {
+  background: url(../../images/orange/bullet.gif) left 6px no-repeat;
+}
+
+/* menus */
+/* simplemenu */
+#supranav li {
+  background: #ca5e1b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ca5e1b 0%, #edb379 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ca5e1b), color-stop(100%,#edb379)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ca5e1b 0%,#edb379 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca5e1b', endColorstr='#edb379',GradientType=0 ); /* IE6-8 */
+}
+
+/* MenuFreshy */
+#nav li {
+  background: #ca5e1b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ca5e1b 0%, #edb379 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ca5e1b), color-stop(100%,#edb379)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ca5e1b 0%,#edb379 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ca5e1b 0%,#edb379 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca5e1b', endColorstr='#edb379',GradientType=0 ); /* IE6-8 */
+}
+
+.dc-archive .post-content ul li {
+  background: url(../../images/orange/bullet.gif) left 6px no-repeat;
+}

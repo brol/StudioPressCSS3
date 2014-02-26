@@ -1,0 +1,12 @@
+<div id="topstories">
+<tpl:Entries tag="test" lastn="4" ignore_pagination="1" no_context="1">
+    <div class="post">
+      <div class="image">
+        {{tpl:EntryImages size="sq" html_tag="div" link="entry" length="1"}}
+      </div>
+      <div class="text">
+        <h2 class="post-title"><a href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
+      </div>
+    </div>
+  </tpl:Entries>
+</div>

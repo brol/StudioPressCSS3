@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: brol <contact@brol.info>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+msgid "Category:"
+msgstr "Catégorie :"
+
+msgid "Tags:"
+msgstr "Mots-clés :"
+
+msgid "Subcategories:"
+msgstr "Sous-catégories :"
+
+msgid "By:"
+msgstr "Par :"
+
+msgid "Customizations"
+msgstr "Personnalisations"
+
+msgid "Menu to display:"
+msgstr "Menu à afficher :"
+
+msgid "none"
+msgstr "aucun"
+
+msgid "menuFreshy or menu (Adjaya)"
+msgstr "menuFreshy ou menu (Adjaya)"
+
+msgid "Plugins menu allowed: menuFreshy (or the <a href="http://aiguebrun.adjaya.info/post/20090202/Telegarger-le-Plugin-Menu-pour-Dotclear2-Download">Adjaya menu</a> plugin), or simpleMenu."
+msgstr "Plugins menu acceptés : menuFreshy (ou le plugin <a href="http://aiguebrun.adjaya.info/post/20090202/Telegarger-le-Plugin-Menu-pour-Dotclear2-Download">menu d'Adjaya</a>), ou simpleMenu."
+
+msgid "Color display:"
+msgstr "Couleur à afficher :"
+
+msgid "blue"
+msgstr "bleu"
+
+msgid "green"
+msgstr "vert"
+
+msgid "red"
+msgstr "rouge"
+
+msgid "Display "Welcome":"
+msgstr "Afficher "Bienvenue" :"
+
+msgid "Welcome text:"
+msgstr "Texte de bienvenue :"
+
+msgid "Welcome!"
+msgstr "Bienvenue !"
+
+msgid "Display "Top Stories":"
+msgstr "Afficher "A la Une" :"
+
+msgid "<a href="http://plugins.dotaddict.org/dc2/details/listImages">listimages</a> Plugin required to display thumbnails in "Top Stories"."
+msgstr "Plugin <a href="http://plugins.dotaddict.org/dc2/details/listImages">listimages</a> requis pour l'affichage des vignettes dans "A la Une"."
+
+msgid "Top Stories:"
+msgstr "A la Une :"
+
+msgid "Dimensions of inserts (for the record): top insert: 468x60px - right insert: 336x280px."
+msgstr "Dimensions des inserts (pour mémoire) : insert en haut : 468x60px - insert à droite : 336x280px."
+
+msgid "Display "Insert Top":"
+msgstr "Afficher "Insert en haut" :"
+
+msgid "Right insert:"
+msgstr "Insert à droite :"
+
+msgid "Display "Insert Right":"
+msgstr "Afficher "Insert à droite" :"
+
+msgid "Top insert:"
+msgstr "Insert en haut :"
+
+msgid "Subscribe<br />to RSS"
+msgstr "Abonnez-vous<br />au flux RSS"
+
+msgid "Search"
+msgstr "Rechercher"

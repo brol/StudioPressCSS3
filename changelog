@@ -1,0 +1,13 @@
+v0.1 (26/02/2014) Pierre Van Glabeke :
+* fork depuis v0.8 de StudioPress par Fran6t
+* renommage du thème en StudioPressCSS3
+* passage en css3 pour tous les arrondis + barres de menu
+* localisation complète du thème
+* ajout dans config de trois autres environnements couleur (vert, orange et rouge)
+* ajout dans config de l'affichage ou non de :
+  menu
+  inserts (welcome, topstories, top, right)
+* ajout dans config insert topstories (à la une) : sélection des 4 derniers billets ayant un tag spécifique, ici "test"
+* réorganisation complète des fichiers et dossiers
+* dotclear 2.6 minimum requis
+* non compatible ie8 et antérieurs

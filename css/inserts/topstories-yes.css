@@ -1,0 +1,48 @@
+/*
+# ***** BEGIN LICENSE BLOCK *****
+#
+#  	StudioPressCSS3
+#  	Theme by Pierre Van Glabeke
+#   original WP theme: http://www.dailyblogtips.com/wordpress-themes
+#   License : http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+#
+# ***** END LICENSE BLOCK *****
+*/
+#topstories {
+  clear: both;
+  padding: 8px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #363636;
+  margin: 15px 0; /* mettre 0 si welcome n'est pas affiché */
+}
+#topstories p {
+  color: #fff;
+  margin: 0;
+  padding: 0 6px;
+  background: none;
+}
+#topstories .post {background:#656565;height:48px;width:100%;padding:0;margin:5px 0;}
+
+#topstories .post .image {display:inline;float:left;}
+
+#topstories a {margin:0;padding:0;}
+
+#topstories .post .text {
+  width:272px;
+  float:left;
+  padding: 5px 6px 0 6px;
+}
+#topstories .post .text h2.post-title {
+  font-size:9pt;
+  font-weight: normal;
+  letter-spacing: 0;
+  padding:0;
+}
+#topstories .post .text h2.post-title a {
+  text-decoration: none;
+}
+#topstories .post .text h2.post-title a:hover {
+  text-decoration: underline;
+}
