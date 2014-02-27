@@ -1,4 +1,4 @@
-v0.1 (26/02/2014) Pierre Van Glabeke :
+v0.1 (27/02/2014) Pierre Van Glabeke :
 * fork depuis v0.8 de StudioPress par Fran6t
 * renommage du thème en StudioPressCSS3
 * passage en css3 pour tous les arrondis + barres de menu
@@ -7,7 +7,8 @@ v0.1 (26/02/2014) Pierre Van Glabeke :
 * ajout dans config de l'affichage ou non de :
   menu
   inserts (welcome, topstories, top, right)
-* ajout dans config insert topstories (à la une) : sélection des 4 derniers billets ayant un tag spécifique, ici "test"
+* ajout dans config insert topstories (à la une) : sélection des 4 derniers billets ayant un tag spécifique, ici "test" (plugin listImages requis pour l'affichage des vignettes)
 * réorganisation complète des fichiers et dossiers
 * dotclear 2.6 minimum requis
 * non compatible ie8 et antérieurs
+- bug : il faut enregistrer deux fois la config du thème pour qu'elle soit prise en compte.

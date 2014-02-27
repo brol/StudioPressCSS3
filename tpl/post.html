@@ -66,7 +66,8 @@
   cut_string="50"}} &#187;</a></tpl:EntryNext>
   </p>
   
-    <h2 id="p{{tpl:EntryID}}" class="postTitle">{{tpl:EntryTitle encode_html="1"}}</h2>
+	<div id="p{{tpl:EntryID}}" class="post">
+    <h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
     <div class="postMeta">
 	<span class="date"><!-- {{tpl:lang on}} -->{{tpl:EntryDate}}<!-- , {{tpl:EntryTime}} --></span>
 	<tpl:EntryIf has_category="1">
@@ -80,8 +81,6 @@
     <tpl:EntryIf has_attachment="1">
       <span class="commentcount"><a href="{{tpl:EntryURL}}#attachments">{{tpl:EntryAttachmentCount}}</a></span></tpl:EntryIf>
 	</div>
-	<div class="sepbil"></div>
-	<div class="post">
 
     <!-- # --BEHAVIOR-- publicEntryBeforeContent -->
     {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
@@ -95,8 +94,6 @@
 
     <!-- # --BEHAVIOR-- publicEntryAfterContent -->
     {{tpl:SysBehavior behavior="publicEntryAfterContent"}}
-    
-	</div>
 	<div class="cleared"></div>
 	<div class="post-info">
 	<span class="author">{{tpl:lang By:}} {{tpl:EntryAuthorLink}}</span>
@@ -105,6 +102,8 @@
     <a href="{{tpl:TagURL}}">{{tpl:TagID}}</a><tpl:LoopPosition start="1" length="-1">, </tpl:LoopPosition>
     <tpl:TagsFooter></tpl:TagsFooter>
     </tpl:EntryTags>
+	</div>
+
 	</div>
 	  <!-- # Attachments -->
 

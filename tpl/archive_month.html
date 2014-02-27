@@ -58,8 +58,8 @@
  <tpl:Entries no_content="1">
     <!-- # New day date -->
     <tpl:DateHeader><p class="day-date">{{tpl:EntryDate}}</p></tpl:DateHeader>
-  <div class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}">
-  <h2 id="p{{tpl:EntryID}}" class="postTitle" lang="{{tpl:EntryLang}}" xml:lang="{{tpl:EntryLang}}"><a
+  <div id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}">
+  <h2 class="post-title" lang="{{tpl:EntryLang}}" xml:lang="{{tpl:EntryLang}}"><a
      href="{{tpl:EntryURL}}" title="{{tpl:lang Read}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
 
     <!-- # Number of comments, trackbacks and attachments -->

@@ -12,7 +12,6 @@
 /* red */
 
 /* Reset Defaults Starts */
-
 a {
   color: #A42828;
 }
@@ -25,7 +24,6 @@ blockquote {
 }
 
 /* Reset Defaults Ends */
-
 body {
   background: #656565 url(../../images/red/bgbody.jpg) repeat-x top left;
 }
@@ -54,17 +52,8 @@ body {
 }
 
 /* Main content */
-
-#content .pageTitle {
-  color: #9E1B1B;
-}
-.sepbil {
+.postMeta {
 	border-bottom: 1px dashed #9E1B1B;
-}
-.commentlist li {
-  background: #e8eef3;
-}
-.commentlist cite a {
 }
 .navigation {
   color: #406E8D;
@@ -105,10 +94,6 @@ body {
 
 /* html par defaut pour les billets */
 pre { background : #e1afaf;}
-
-/* ------------------------------------------------------------
-	7. COMMENTAIRES, PINGS (version initiale Kozlika)
-------------------------------------------------------------- */
 
 #comments dt.me { color : #A42828;}
 #comments dd.me { color : #A42828;background-color:#e1afaf;}

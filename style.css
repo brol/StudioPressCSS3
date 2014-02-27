@@ -170,37 +170,23 @@ body {
   border:1px solid #fff;
 }
 
-#contentwrapper {
-  float: left;
-  width: 550px;
-}
-
 #content {
   float: left;
-  width: 550px;
-  margin: 10px 0 0 0;
+  width: 540px;
+  margin: 10px 20px 0 10px;
 }
+h2.post-title {margin:0;}
 
-#content .pageTitle {
-  padding: 5px 10px 0 10px;
-  font-size: 14pt;
-}
-
-.contentsearch {
-  margin: 0 0 40px 100px;
-}
-
-.contentsponsors {
-  margin: 0 0 30px 190px;
-}
-
-.post {
-  margin: 20px 0 25px 0;
+.post, .content-inner {
+  margin: 20px 10px 25px 0;
   padding: 0;
 }
-
+#content-info {margin: 0 10px 0 0;}
+.post-excerpt, .post-content, #content-info h2 {
+  margin: 0;
+}
 #content h2, #content h3, #content h4, #content h5, #content h6 {
-  padding: 0 10px;
+  padding: 0;
   font-weight: bold;
 }
 #content h2 {
@@ -220,9 +206,10 @@ body {
 }
 
 .postMeta {
-  padding: 2px 10px 4px 10px;
+  padding: 2px 0 4px 0;
   font-size: 9pt;
   color: #333;
+  margin: 0 0 10px 0;
 }
 
 .postMeta .date {
@@ -246,11 +233,6 @@ body {
 .postMeta a {
   text-decoration: none;
 }
-  
-.sepbil {
-	padding: 0;
-	margin: 0 10px 18px 10px;
-}
 
 /*Pour supprimer le contour des images mettre #fff à la place de #CCC*/    
 .post-excerpt img, .post-content img {
@@ -260,22 +242,23 @@ body {
 }
 
 #content p, .post-content p {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 0;
+  font-size: 10pt;
+}
+.post-excerpt ul, .post-excerpt ol,
+.post-content ul, .post-content ol {
+  padding: 0 0 0 25px;
+}
+.post-excerpt ul li, .post-excerpt ol li,
+.post-content ul li, .post-content ol li {
   font-size: 10pt;
   color: #000;
 }
-.post-content ul, ol {
-  padding: 0 0 0 35px;
-}
-
-.post-content ul li, ol li {
-  font-size: 10pt;
-  color: #000;
-}
-
+.footnotes {margin:10px 0 0 0;}
+#content h4.footnotes-title {font-size:0.8em;}
+#content .post-content .footnotes p {font-size:0.7em;}
 .post-info {
-  margin: 20px 10px;
+  margin: 20px 0;
   font-size: 9pt;
   color: #000;
   background: #eee;
@@ -296,36 +279,6 @@ p.comments a {
   text-decoration: none;
   background: url(images/comment.gif) left top no-repeat;
 }
-
-.commentlist {
-  margin: 10px 0;
-  font-size: 10pt;
-  list-style: none;
-}
-
-.commentlist li {
-  margin: 0 0 10px -25px;
-  width: 510px;
-}
-
-.commentlist li.alt {
-  margin: 0 0 10px -25px;
-  background: #FFFFFF;
-  width: 510px;
-}
-
-.commentlist cite {
-  padding: 10px;
-  font-size: 10pt;
-}
-
-.commentlist cite a {
-}
-
-.commentmetadata {
-  padding: 10px;
-}
-
 .comment h3 {
   padding: 0 10px;
   font-size: 12pt;
@@ -523,7 +476,7 @@ p.comments a {
 fieldset { border:none; display : block; }
 
 #navlinks, .pagination, .day-date {
-	margin: 30px 10px;
+	margin: 30px 10px 30px 0;
 	border-top: 1px dashed #b6b6b6;
 	border-bottom: 1px dashed #b6b6b6;
 	text-align: center;
@@ -586,34 +539,30 @@ a.feed {
 
 /* html par defaut pour les billets */
 code, pre { font : 90% "courier new"; color : #000; }
-pre { width : 95%; overflow : auto; padding : 0 4px; border : 1px solid #aaa; margin:0 0 0 10px; }
+pre { width : 98%; overflow : auto; padding : 0 4px; border : 1px solid #aaa; margin:0; }
 sup { font-size : xx-small; padding-left : 1px; }
 abbr, acronym { }
 q { background : #fffff3; padding : 0 3px;}
 blockquote { border : 2px dotted #dbdbdb; padding : 0px 4px; background : #fffff9 url(images/quote.gif) no-repeat 4px 4px; text-indent : 2em;}
 cite { }
 
-/* ------------------------------------------------------------
-	7. COMMENTAIRES, PINGS (version initiale Kozlika)
-------------------------------------------------------------- */
+/* COMMENTAIRES, PINGS */
 
-#comments, #pings, #pr, #comment-form { margin-left: 10px; padding-left: 10px; font-size : .95em;}
-#comments h3, #pings h3, #pr h3, #comment-form h3, #attachments h3 { font-weight : bold; padding: 10px 0 10px 0; margin: 10px 0 10px 0; }
-#comments { background : #fff; padding-top : 4px; margin: 0px; }
-#comments h3, #attachments h3 { border-top : 2px solid #ddd; }
+#comments, #pings, #pr, #comment-form { margin: 20px 10px 25px 0; padding-left: 0; font-size : .95em;}
+#comments { background : #fff; padding-top : 4px; }
+#comments h3, #pings h3, #pr h3, #comment-form h3, #attachments h3 { border-top : 2px solid #ddd; font-weight : bold; padding: 10px 0 10px 0; margin: 10px 0 10px 0; }
 
 #comments dl { margin-bottom : 1.2em; padding-left: 10px; }
 #pings dl { padding-left: 10px; }
-#pr dl { padding : 4px; border-bottom : 2px solid #ddd; margin : 0 0 2em 0; width : 95%; }
+#pr dl { padding : 4px; margin : 0 0 2em 0; width : 95%; }
 
 #comments dt, #pings dt, #pr dt { clear : both; padding-top : 4px; margin-top : 24px; font-size : .95em;}
 #comments dt a:link, #pings dt a:link, #pr dt a:link { font-weight : bold; font-size : .95em;}
 #comments dt a:hover { }
-#comments dd h3 {border:none;margin:0;padding:0 10px;}
-#comments dd, #pings dd, #pr dd { margin-left : 15px; background : #eee;}
+#comments dd h3 {border:none;margin:0;padding:0;}
+#comments dd, #pings dd, #pr dd { margin-left : 15px; background : #eee; padding:0 10px;}
 #comments dd p, #pings dd p, #pr dd p { margin : .5em 0;}
 
-/* .comment-number, .ping-number { display : block; width : 30px; padding-top : 2px; float:left; font-size : 1em; font-weight : normal; }*/
 .comment-number, .ping-number { font-size : .95em;}
 
 #comment-form { padding : 0;}
@@ -624,12 +573,12 @@ cite { }
 .field textarea {border : 1px solid #ccc; width : 95%; margin : .5em 0; padding : 4px; font-family: "Trebuchet MS", sans-serif; font-size:1em;}
 .field textarea:focus { border : 1px solid #777; background : #fff;}
 #comment-form .jstEditor textarea {border : 1px solid #ccc; width:95%;}
-.form-help { margin-top : 0; margin-left : 12px; width : 95%; }
+.form-help { margin-top : 0; text-align:center; }
 
-#ping-url { background : #eee; margin-left: 10px; }
+#content p#ping-url { background : #eee; padding: 2px 4px; margin: 0 10px 0 0; }
 
-#comments-feed { margin-left: 10px; }
-
+.error {color:red;font-weight:bold;}
+.message {color:green;font-weight:bold;}
 
 .barre {
 	text-decoration: line-through;
@@ -641,11 +590,13 @@ cite { }
 }
 
 /* Pour regler le problème des li dans les commentaires */
-#comments ul, ol {
-  padding: 0 0 0 35px;
+#comments ul, #comments ol,
+.comment-preview ul, .comment-preview ol {
+  padding: 0 0 0 25px;
 }
 
-#comments ul li, ol li {
+#comments ul li, #comments ol li,
+.comment-preview ul li, .comment-preview ol li {
   font-size: 10pt;
   color: #000;
 }
@@ -660,6 +611,7 @@ cite { }
   border: none;
 }
 .dc-category #content-info img, .content-inner img {max-width:100%;}
+.dc-archive .post-content h3 {text-align:center;}
 .dc-archive .post-content ul {margin:0 0 20px 0;}
 .dc-archive .post-content ul li {
   list-style:none;
@@ -670,7 +622,7 @@ cite { }
 #allsidebars img {max-width:100%;}
 .post .smiley, #comment .smiley {margin:0;padding:0;border:none;}
 
-#attachments {padding-left:10px;}
+#attachments {margin: 0 10px 0 0;}
 #attachments ul {margin:0 0 0 20px;}
 #attachments li {margin: 3px 0; list-style: none;font-size:0.8em;padding: 2px 0;}
 #attachments li.audio object {margin:0;vertical-align:bottom;}

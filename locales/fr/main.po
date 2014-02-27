@@ -10,14 +10,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-msgid "Category:"
-msgstr "Catégorie :"
-
 msgid "Tags:"
 msgstr "Mots-clés :"
-
-msgid "Subcategories:"
-msgstr "Sous-catégories :"
 
 msgid "By:"
 msgstr "Par :"
