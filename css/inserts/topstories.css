@@ -9,6 +9,7 @@
 # ***** END LICENSE BLOCK *****
 */
 #topstories {
+  display:block;
   clear: both;
   padding: 8px 10px;
   -webkit-border-radius: 10px;

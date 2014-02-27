@@ -8,8 +8,9 @@
 #
 # ***** END LICENSE BLOCK *****
 */
-.insert-top {
+.insert-right {
+  display:block;
   text-align:center;
-  margin:10px 0 25px 0;
+  margin:0 0 20px 0;
   font-size:9pt;
 }

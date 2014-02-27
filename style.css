@@ -175,6 +175,7 @@ body {
   width: 540px;
   margin: 10px 20px 0 10px;
 }
+.insert-top {display:none;}
 h2.post-title {margin:0;}
 
 .post, .content-inner {
@@ -335,7 +336,8 @@ p.comments a {
   float:right;
   margin: 15px 0 0 0;
 }
-
+#welcome {display:none;}
+#topstories {display:none;}
 #allsidebars h2 a, #allsidebars h2 a:hover {color:#fff;}
 
 #allsidebars .categories li.category-current {
@@ -361,7 +363,7 @@ p.comments a {
   float: right;
   width: 165px;
 }
-
+.insert-right {display:none;}
 .sidebarsB h2 {
   padding: 2px 7px;
   font-size: 11pt;

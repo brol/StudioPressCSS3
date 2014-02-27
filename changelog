@@ -1,4 +1,9 @@
-v0.1 (27/02/2014) Pierre Van Glabeke :
+v0.2 (27/02/2014) Pierre Van Glabeke :
+* modifs _config.php et _public.php
+* ajout avertissement bug
+* modifs css
+
+v0.1 (25/02/2014) Pierre Van Glabeke :
 * fork depuis v0.8 de StudioPress par Fran6t
 * renommage du thème en StudioPressCSS3
 * passage en css3 pour tous les arrondis + barres de menu
