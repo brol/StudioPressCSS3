@@ -48,7 +48,7 @@ body {
   text-align:left;
 }
 #prelude a:hover, #underheader #toprss a:hover {
-  color: #edb379;
+  color: #FFF8E5;
 }
 
 /* Main content */
@@ -93,12 +93,11 @@ body {
 }
 
 /* html par defaut pour les billets */
-pre { background : #edb379;}
+pre { background : #FFF8E5;}
 
-#comments dt.me { color : #ca5e1b;}
-#comments dd.me { color : #ca5e1b;background-color:#edb379;}
-.field input { background : #edb379;}
-.field textarea {background : #edb379;}
+#comments dd.me { color : #000; background-color:#FFF8E5;}
+.field input { background : #FFF8E5;}
+.field textarea {background : #FFF8E5;}
 
 .form-help { color : #ca5e1b; }
 .dc-category #subcategories li {
@@ -117,6 +116,12 @@ pre { background : #edb379;}
   background: linear-gradient(to bottom,  #ca5e1b 0%,#edb379 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca5e1b', endColorstr='#edb379',GradientType=0 ); /* IE6-8 */
 }
+#supranav li.active a {
+  color: #ca5e1b;
+}
+#supranav li a:hover {
+  color: #ca5e1b;
+}
 
 /* MenuFreshy */
 #nav li {
@@ -129,7 +134,13 @@ pre { background : #edb379;}
   background: linear-gradient(to bottom,  #ca5e1b 0%,#edb379 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca5e1b', endColorstr='#edb379',GradientType=0 ); /* IE6-8 */
 }
+#nav li a:hover {
+  color: #ca5e1b;
+}
+#nav li.current_page_item a {
+  color: #ca5e1b;
+}
 
 .dc-archive .post-content ul li {
-  background: url(../../images/orange/bullet.gif) left 6px no-repeat;
+  background: url(../../images/orange/bullet.gif) left 8px no-repeat;
 }

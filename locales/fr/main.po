@@ -31,6 +31,9 @@ msgstr "menuFreshy ou menu (Adjaya)"
 msgid "Plugins menu allowed: menuFreshy (or the <a href="http://aiguebrun.adjaya.info/post/20090202/Telegarger-le-Plugin-Menu-pour-Dotclear2-Download">Adjaya menu</a> plugin), or simpleMenu."
 msgstr "Plugins menu acceptés : menuFreshy (ou le plugin <a href="http://aiguebrun.adjaya.info/post/20090202/Telegarger-le-Plugin-Menu-pour-Dotclear2-Download">menu d'Adjaya</a>), ou simpleMenu."
 
+msgid "Colors"
+msgstr "Couleurs"
+
 msgid "Color display:"
 msgstr "Couleur à afficher :"
 
@@ -43,11 +46,14 @@ msgstr "vert"
 msgid "red"
 msgstr "rouge"
 
+msgid "Welcome"
+msgstr "Bienvenue"
+
 msgid "Display Welcome"
 msgstr "Afficher Bienvenue"
 
-msgid "Welcome text:"
-msgstr "Texte de bienvenue :"
+msgid "Code:"
+msgstr "Code :"
 
 msgid "Welcome!"
 msgstr "Bienvenue !"
@@ -58,26 +64,23 @@ msgstr "Afficher A la Une"
 msgid "<a href="http://plugins.dotaddict.org/dc2/details/listImages">listimages</a> Plugin required to display thumbnails in "Top Stories"."
 msgstr "Plugin <a href="http://plugins.dotaddict.org/dc2/details/listImages">listimages</a> requis pour l'affichage des vignettes dans "A la Une"."
 
-msgid "Top Stories:"
-msgstr "A la Une :"
+msgid "Top Stories"
+msgstr "A la Une"
 
-msgid "Dimensions of inserts (for the record): top insert: 468x60px - right insert: 336x280px."
-msgstr "Dimensions des inserts (pour mémoire) : insert en haut : 468x60px - insert à droite : 336x280px."
+msgid "Top insert"
+msgstr "Insert en haut"
 
-msgid "Display Insert Top"
-msgstr "Afficher Insert en haut"
+msgid "Display the insert"
+msgstr "Afficher l'insert"
 
-msgid "Right insert:"
-msgstr "Insert à droite :"
+msgid "Dimensions of the insert (for the record): 468x60px."
+msgstr "Dimensions de l'insert (pour mémoire) : 468x60px."
 
-msgid "Display Insert Right"
-msgstr "Afficher Insert à droite"
+msgid "Right insert"
+msgstr "Insert à droite"
 
-msgid "Top insert:"
-msgstr "Insert en haut :"
-
-msgid "Small bug: during the first recording customizations, please click on the save button twice."
-msgstr "Petit bug : lors du premier enregistrement des personnalisations, veuillez cliquer sur le bouton enregistrer deux fois de suite."
+msgid "Dimensions of the insert (for the record): 336x280px."
+msgstr "Dimensions de l'insert (pour mémoire) : 336x280px."
 
 msgid "Subscribe<br />to RSS"
 msgstr "Abonnez-vous<br />au flux RSS"

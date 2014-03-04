@@ -47,7 +47,7 @@ body {
   background: transparent url(../../images/blue/rssbig.png) right top no-repeat;
 }
 #prelude a:hover, #underheader #toprss a:hover {
-  color: #87BBD9;
+  color: #e8f0ff;
 }
 /* Main content */
 .postMeta {
@@ -93,8 +93,7 @@ body {
 /* html par defaut pour les billets */
 pre { background : #e8f0ff;}
 
-#comments dt.me { color : #346;}
-#comments dd.me { color : #346;background-color:#E5EEFF;}
+#comments dd.me { color : #000;background-color:#E5EEFF;}
 .field input { background : #e5eeff;}
 .field textarea {background : #e5eeff;}
 
@@ -115,6 +114,12 @@ pre { background : #e8f0ff;}
   background: linear-gradient(to bottom,  #397094 0%,#83adc9 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#397094', endColorstr='#83adc9',GradientType=0 ); /* IE6-8 */
 }
+#supranav li.active a {
+  color: #215679;
+}
+#supranav li a:hover {
+  color: #215679;
+}
 
 /* MenuFreshy */
 #nav li {
@@ -127,7 +132,13 @@ pre { background : #e8f0ff;}
   background: linear-gradient(to bottom,  #397094 0%,#83adc9 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#397094', endColorstr='#83adc9',GradientType=0 ); /* IE6-8 */
 }
+#nav li a:hover {
+  color: #215679;
+}
+#nav li.current_page_item a {
+  color: #215679;
+}
 
 .dc-archive .post-content ul li {
-  background: url(../../images/blue/bullet.gif) left 6px no-repeat;
+  background: url(../../images/blue/bullet.gif) left 8px no-repeat;
 }
