@@ -8,4 +8,3 @@ $template_theme_style = array(
 # Widget style menu
 //$widget_theme_style = array(
 //);
-?>

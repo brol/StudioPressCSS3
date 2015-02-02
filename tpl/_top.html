@@ -1,4 +1,4 @@
-<div id="top">
+<div id="top" role="banner"><!-- v0.3 -->
   <form method="get" id="searchform" action="{{tpl:BlogURL}}">
     <p>
 			<input type="text" value="" name="q" id="searchbox" />
@@ -7,7 +7,7 @@
 	</form>
 <!-- # --BEHAVIOR-- publicTopAfterContent -->
 {{tpl:SysBehavior behavior="publicTopAfterContent"}}
-<p id="prelude"><a href="#main">{{tpl:lang To content}}</a> | <a href="#blognav">{{tpl:lang To menu}}</a></p>
+<p id="prelude" role="navigation"><a href="#main">{{tpl:lang To content}}</a> | <a href="#blognav">{{tpl:lang To menu}}</a></p>
 
 <div id="underheader">
 <div id="toprss">
@@ -18,7 +18,7 @@
 <p class="sitedesc">{{tpl:BlogDescription encode_html="1"}}</p>
 </div>
 
-<div id="nav">
+<div id="nav" role="navigation">
 {{tpl:MenuFreshy}}
 </div> <!-- Closes Nav -->
 
