@@ -22,7 +22,7 @@ function studiopresscss3menu_publicHeadContent($core)
 		$style = 'simplemenu';
 	}
 
-	$url = $core->blog->settings->themes_url.'/'.$core->blog->settings->theme;
+	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
 	echo '<link rel="stylesheet" type="text/css" media="projection, screen" href="'.$url."/css/menus/".$style.".css\" />\n";
 	echo '<!--[if lte IE 9]><link rel="stylesheet" type="text/css" media="projection, screen" href="'.$url."/css/ie9/".$style."-ie9.css\" /><![endif]-->\n";
 }
@@ -37,7 +37,7 @@ function studiopresscss3color_publicHeadContent($core)
 		$style = 'blue';
 	}
 
-	$url = $core->blog->settings->themes_url.'/'.$core->blog->settings->theme;
+	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
 	echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/colors/".$style.".css\" />\n";
 	echo '<!--[if lte IE 9]><link rel="stylesheet" type="text/css" media="projection, screen" href="'.$url."/css/ie9/".$style."-ie9.css\" /><![endif]-->\n";
 }
@@ -53,7 +53,7 @@ class tplStudiopresscss3_welcome
 {
 	public static function publicHeadContent($core)
 	{
-	$url = $core->blog->settings->themes_url.'/'.$core->blog->settings->theme;
+	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
 		echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/inserts/welcome.css\" />\n";
 	}
 }
@@ -69,7 +69,7 @@ class tplStudiopresscss3_topstories
 {
 	public static function publicHeadContent($core)
 	{
-	$url = $core->blog->settings->themes_url.'/'.$core->blog->settings->theme;
+	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
 		echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/inserts/topstories.css\" />\n";
 	}
 }
@@ -85,7 +85,7 @@ class tplStudiopresscss3_inserttop
 {
 	public static function publicHeadContent($core)
 	{
-	$url = $core->blog->settings->themes_url.'/'.$core->blog->settings->theme;
+	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
 		echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/inserts/inserttop.css\" />\n";
 	}
 }
@@ -101,7 +101,7 @@ class tplStudiopresscss3_insertright
 {
 	public static function publicHeadContent($core)
 	{
-	$url = $core->blog->settings->themes_url.'/'.$core->blog->settings->theme;
+	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
 		echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/inserts/insertright.css\" />\n";
 	}
 }
