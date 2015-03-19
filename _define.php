@@ -14,8 +14,9 @@ $this->registerModule(
 	/* Name */			    "StudioPressCSS3",
 	/* Description*/		"Trois colonnes fixes avec onglets en CSS3",
 	/* Author */			  "Pierre Van Glabeke",
-	/* Version */			  '0.4',
+	/* Version */			  '0.5',
 	array(
-		'type'		=>		'theme'
+		'type'	 =>	'theme',
+		'tplset' => 'mustek'
 	)
 );

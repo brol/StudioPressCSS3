@@ -51,7 +51,6 @@ $studiopresscss3_color_combo = array(
 
 # Welcome
 $html_filewelcome = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-welcome.html';
-$html_contentwelcome = is_file($html_filewelcome) ? file_get_contents($html_filewelcome) : '';
 
 if (!is_file($html_filewelcome) && !is_writable(dirname($html_filewelcome))) {
 	throw new Exception(
@@ -62,7 +61,6 @@ if (!is_file($html_filewelcome) && !is_writable(dirname($html_filewelcome))) {
 
 # Top stories
 $html_filetopstories = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-topstories.html';
-$html_contenttopstories = is_file($html_filetopstories) ? file_get_contents($html_filetopstories) : '';
 
 $topstories = $core->blog->settings->themes->studiopresscss3_topstories;
 
@@ -75,7 +73,6 @@ if (!is_file($html_filetopstories) && !is_writable(dirname($html_filetopstories)
 
 # Insert top
 $html_filetop = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-inserttop.html';
-$html_contenttop = is_file($html_filetop) ? file_get_contents($html_filetop) : '';
 
 if (!is_file($html_filetop) && !is_writable(dirname($html_filetop))) {
 	throw new Exception(
@@ -86,7 +83,7 @@ if (!is_file($html_filetop) && !is_writable(dirname($html_filetop))) {
 
 # Insert right
 $html_fileright = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-insertright.html';
-$html_contentright = is_file($html_fileright) ? file_get_contents($html_fileright) : '';
+
 
 if (!is_file($html_fileright) && !is_writable(dirname($html_fileright))) {
 	throw new Exception(
@@ -217,6 +214,11 @@ if (!empty($_POST))
 		$core->error->add($e->getMessage());
 	}
 }
+
+$html_contentwelcome = is_file($html_filewelcome) ? file_get_contents($html_filewelcome) : '';
+$html_contenttopstories = is_file($html_filetopstories) ? file_get_contents($html_filetopstories) : '';
+$html_contenttop = is_file($html_filetop) ? file_get_contents($html_filetop) : '';
+$html_contentright = is_file($html_fileright) ? file_get_contents($html_fileright) : '';
 
 // DISPLAY
 
