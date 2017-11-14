@@ -1,44 +1,24 @@
-<!DOCTYPE html>
-<html lang="{{tpl:BlogLanguage}}">
+{{tpl:extends parent="__layout.html"}}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX"}}" />
-
+<tpl:Block name="head-title">
   <title>{{tpl:lang Categories Page}} - {{tpl:BlogName encode_html="1"}}</title>
-  <meta name="copyright" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
-  <meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
+</tpl:Block>
 
-  <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-  <meta name="dc.title" lang="{{tpl:BlogLanguage}}" content="{{tpl:lang Categories page}} - {{tpl:BlogName encode_html="1"}}" />
-  <meta name="dc.language" content="{{tpl:BlogLanguage}}" />
-  <meta name="dc.publisher" content="{{tpl:BlogEditor encode_html="1"}}" />
-  <meta name="dc.rights" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
+<tpl:Block name="meta-robots">
+  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX"}}" />
+</tpl:Block>
 
-  <meta name="dc.type" content="text" />
-  <meta name="dc.format" content="text/html" />
-
-  <link rel="top" href="{{tpl:BlogURL}}" title="{{tpl:lang Home}}" />
+<tpl:Block name="head-linkrel">
   <link rel="contents" title="{{tpl:lang Archives}}" href="{{tpl:BlogArchiveURL}}" />
   <tpl:Categories>
   <link rel="section" href="{{tpl:CategoryURL}}" title="{{tpl:CategoryTitle encode_html="1"}}" />
   </tpl:Categories>
-
   <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:BlogFeedURL type="atom"}}" />
-  <link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
+</tpl:Block>
 
-  {{tpl:include src="_head.html"}}
-</head>
+<tpl:Block name="body-tag"><body class="dc-categories"></tpl:Block>
 
-<body class="dc-categories">
-<div id="page">
-{{tpl:include src="_top.html"}}
-
-<div id="wrapper">
-
-<div id="main" role="main">
-<div id="content">
-
+<tpl:Block name="main-content">
   {{tpl:include src="inc-inserttop.html"}}
 
   <div id="content-info">
@@ -62,18 +42,4 @@
   </div>
 
 <div class="cleared"></div>
-
-</div> <!-- Closes Content -->
-
-{{tpl:include src="_sidebar.html"}}
-
-</div> <!-- Closes Main -->
-
-</div> <!-- End #wrapper -->
-
-{{tpl:include src="_footer.html"}}
-
-</div> <!-- End #page -->
-
-</body>
-</html>
+</tpl:Block>

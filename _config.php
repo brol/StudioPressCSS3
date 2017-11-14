@@ -37,7 +37,7 @@ $my_insertright = $core->blog->settings->themes->studiopresscss3_insertright;
 # Menu type
 $studiopresscss3_menu_combo = array(
 	__('simpleMenu') => 'simplemenu',
-	__('menuFreshy or menu (Adjaya)') => 'menufreshy',
+	__('Menu') => 'menufreshy',
 	__('none') => 'menu-no'
 );
 
@@ -228,7 +228,7 @@ echo
 '<p class="field"><label>'.__('Menu to display:').'</label>'.
 form::combo('studiopresscss3_menu',$studiopresscss3_menu_combo,$my_menu).
 '</p>'.
-'<p class="info">'.__('Plugins menu allowed: menuFreshy (or the <a href="http://aiguebrun.adjaya.info/post/20090202/Telegarger-le-Plugin-Menu-pour-Dotclear2-Download">Adjaya menu</a> plugin), or simpleMenu.').'</p>'.
+'<p class="info">'.__('Plugins menu allowed: Menu or simpleMenu.').'</p>'.
 '</div>';
 
 # Color scheme

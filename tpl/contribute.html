@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{tpl:BlogLanguage}}">
+{{tpl:extends parent="__layout.html"}}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX,NOFOLLOW"}}" />
-  <title>{{tpl:lang Contribute}} - {{tpl:BlogName encode_html="1"}}</title>
+<tpl:Block name="head-title">
+	<title>{{tpl:lang Contribute}} - {{tpl:BlogName encode_html="1"}}</title>
+</tpl:Block>
 
-  <link rel="top" href="{{tpl:BlogURL}}" title="{{tpl:lang Home}}" />
-  <link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+<tpl:Block name="meta-robots">
+	<meta name="ROBOTS" content="{{tpl:BlogMetaRobots robots="NOINDEX,NOARCHIVE,NOFOLLOW"}}" />
+</tpl:Block>
 
-  <link rel="alternate" type="application/rss+xml" title="RSS 2.0"
-  	href="{{tpl:BlogFeedURL type="rss2"}}" />
-  <link rel="alternate" type="application/atom+xml" title="Atom 1.0"
-  	href="{{tpl:BlogFeedURL type="atom"}}" />
-  <link rel="meta" type="application/xbel+xml" title="Blogroll"
-  	href="{{tpl:BlogrollXbelLink}}" />
+<tpl:Block name="head-linkrel">
+	<link rel="contents" title="{{tpl:lang Archives}}" href="{{tpl:BlogArchiveURL}}" />
+</tpl:Block>
 
+<tpl:Block name="html-head">
   <style type="text/css">
 		#main label {display:block;}
 		#main input[type=text], #main textarea {width:100%;}
@@ -32,9 +29,7 @@
 			border: 2px solid yellow;
 		}
 	</style>
-
-  {{tpl:include src="_head.html"}}
-
+	
   <link rel="stylesheet" type="text/css" href="{{tpl:BlogQmarkURL}}pf=contribute/style/jsToolBar/jsToolBar.css" />
 
   <script type="text/javascript" src="{{tpl:BlogQmarkURL}}pf=contribute/js/contribute.pack.js"></script>
@@ -131,16 +126,11 @@
 
 	//]]>
 	</script>
-</head>
+</tpl:Block>
 
-<body class="dc-post">
-<div id="page">
-{{tpl:include src="_top.html"}}
+<tpl:Block name="body-tag"><body class="dc-post"></tpl:Block>
 
-<div id="wrapper">
-
-<div id="main" role="main">
-<div id="content">
+<tpl:Block name="main-content">
   {{tpl:include src="inc-inserttop.html"}}
 <div class="content-inner">
 	<div id="content-info">
@@ -171,7 +161,7 @@
 
     <h2 id="p{{tpl:EntryID}}" class="postTitle">{{tpl:EntryTitle encode_html="1"}}</h2>
     <div class="postMeta">
-	<span class="date"><!-- {{tpl:lang on}} -->{{tpl:EntryDate}}<!-- , {{tpl:EntryTime}} --></span>
+	<span class="date">{{tpl:EntryDate}}</span>
 	<tpl:EntryIf has_category="1">
 	<span class="filed"><a href="{{tpl:EntryCategoryURL}}" rel="category">{{tpl:EntryCategory encode_html="1"}}</a></span>
     </tpl:EntryIf>
@@ -429,17 +419,4 @@
 
 </div><!-- End #content-inner -->
     <div class="cleared"></div>
-</div> <!-- Closes Content -->
-
-{{tpl:include src="_sidebar.html"}}
-
-</div> <!-- Closes Main -->
-
-</div> <!-- End #wrapper -->
-
-{{tpl:include src="_footer.html"}}
-
-</div> <!-- End #page -->
-
-</body>
-</html>
+</tpl:Block>

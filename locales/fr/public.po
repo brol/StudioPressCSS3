@@ -1,0 +1,36 @@
+# Language: Français
+# Module: StudioPressCSS3 - 0.7
+# Date: 2017-11-12 19:52:25
+# Translated with translater 2017.05.10
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: StudioPressCSS3 0.7\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2017-11-12T19:52:25+00:00\n"
+"Last-Translator: brol\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: tpl/__layout.html:116
+#: tpl/category.html:111
+#: tpl/contribute.html:194
+#: tpl/external.html:43
+#: tpl/page.html:50
+#: tpl/post.html:81
+#: tpl/search.html:89
+#: tpl/tag.html:93
+msgid "By:"
+msgstr "Par :"
+
+#: tpl/_top.html:14
+msgid "Subscribe<br />to RSS"
+msgstr "Abonnez-vous<br />au flux RSS"
+
+#: tpl/inc-welcome.html:2
+msgid "Welcome!"
+msgstr "Bienvenue !"
+

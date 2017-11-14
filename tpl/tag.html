@@ -1,57 +1,39 @@
-<!DOCTYPE html>
-<html lang="{{tpl:BlogLanguage}}">
+{{tpl:extends parent="__layout.html"}}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="ROBOTS" content="{{tpl:BlogMetaRobots}}" />
+<tpl:Block name="head-title">
+	<title>{{tpl:lang Tag}} - {{tpl:TagID}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
+</tpl:Block>
 
-  <title>{{tpl:lang Tag}} - {{tpl:TagID}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf></title>
-  <meta name="copyright" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
-  <meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
-  <meta name="date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+<tpl:Block name="meta-entry">
+	<meta name="author" content="{{tpl:BlogEditor encode_html="1"}}" />
+	<meta name="date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
+</tpl:Block>
 
-  <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/" />
-  <meta property="dc.title" lang="{{tpl:BlogLanguage}}" content="{{tpl:lang Tag}} - {{tpl:TagID}} - {{tpl:BlogName encode_html="1"}}<tpl:PaginationIf start="0"> - {{tpl:lang page}} {{tpl:PaginationCurrent}}</tpl:PaginationIf>" />
-  <meta property="dc.language" content="{{tpl:BlogLanguage}}" />
-  <meta property="dc.publisher" content="{{tpl:BlogEditor encode_html="1"}}" />
-  <meta property="dc.rights" content="{{tpl:BlogCopyrightNotice encode_html="1"}}" />
-  <meta property="dc.date" content="{{tpl:BlogUpdateDate iso8601="1"}}" />
-  <meta property="dc.type" content="text" />
-  <meta property="dc.format" content="text/html" />
+<tpl:Block name="head-linkrel">
+	<link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+	<tpl:Entries no_content="1">
+		<tpl:EntriesHeader>
+			<tpl:Pagination>
+				<tpl:PaginationIf end="0">
+					<link rel="prev" title="{{tpl:lang previous entries}}" href="{{tpl:PaginationURL offset="1"}}" />
+				</tpl:PaginationIf>
 
-  <link rel="top" href="{{tpl:BlogURL}}" title="{{tpl:lang Home}}" />
-  <link rel="contents" href="{{tpl:BlogArchiveURL}}" title="{{tpl:lang Archives}}" />
+				<tpl:PaginationIf start="0">
+					<link rel="next" title="{{tpl:lang next entries}}" href="{{tpl:PaginationURL offset="-1"}}" />
+				</tpl:PaginationIf>
+			</tpl:Pagination>
+		</tpl:EntriesHeader>
 
-  <tpl:Entries no_content="1">
-    <tpl:EntriesHeader>
-      <tpl:Pagination>
-        <tpl:PaginationIf end="0">
-        <link rel="prev" title="{{tpl:lang previous entries}}" href="{{tpl:PaginationURL offset="1"}}" />
-        </tpl:PaginationIf>
+		<link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" />
+	</tpl:Entries>
 
-        <tpl:PaginationIf start="0">
-        <link rel="next" title="{{tpl:lang next entries}}" href="{{tpl:PaginationURL offset="-1"}}" />
-        </tpl:PaginationIf>
-      </tpl:Pagination>
-    </tpl:EntriesHeader>
+	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:TagFeedURL type="atom"}}" />
+	<link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
+</tpl:Block>
 
-    <link rel="chapter" href="{{tpl:EntryURL}}" title="{{tpl:EntryTitle encode_html="1"}}" />
-  </tpl:Entries>
+<tpl:Block name="body-tag"><body class="dc-tag"></tpl:Block>
 
-  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{tpl:TagFeedURL type="atom"}}" />
-  <link rel="meta" type="application/xbel+xml" title="Blogroll" href="{{tpl:BlogrollXbelLink}}" />
-
-  {{tpl:include src="_head.html"}}
-</head>
-
-<body class="dc-tag">
-<div id="page">
-{{tpl:include src="_top.html"}}
-
-<div id="wrapper">
-
-<div id="main" role="main">
-<div id="content">
+<tpl:Block name="main-content">
   {{tpl:include src="inc-inserttop.html"}}
 
   <div id="content-info">
@@ -69,14 +51,12 @@
 
   <tpl:Entries>
     <div id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}" lang="{{tpl:EntryLang}}" role="article">
-    <!-- # New day date -->
-    <!-- <tpl:DateHeader><p class="day-date">{{tpl:EntryDate}}</p></tpl:DateHeader> -->
 
     <h2 class="post-title"><a
     href="{{tpl:EntryURL}}">{{tpl:EntryTitle encode_html="1"}}</a></h2>
     
     <div class="postMeta">
-	<span class="date"><!-- {{tpl:lang on}} -->{{tpl:EntryDate}}<!-- , {{tpl:EntryTime}} --></span>
+	<span class="date">{{tpl:EntryDate}}</span>
 	<tpl:EntryIf has_category="1">
 	<span class="filed"><a href="{{tpl:EntryCategoryURL}}" rel="category">{{tpl:EntryCategory encode_html="1"}}</a></span>
     </tpl:EntryIf>
@@ -92,13 +72,12 @@
     <!-- # --BEHAVIOR-- publicEntryBeforeContent -->
     {{tpl:SysBehavior behavior="publicEntryBeforeContent"}}
 
-
     <!-- # Entry with an excerpt -->
     <tpl:EntryIf extended="1">
       <div class="post-content">{{tpl:EntryExcerpt}}</div>
       <p class="read-it"><a href="{{tpl:EntryURL}}"
       title="{{tpl:lang Continue reading}} {{tpl:EntryTitle encode_html="1"}}">{{tpl:lang Continue
-      reading}}</a>...</p>
+      reading}}</a><span class="readmore-ellipsis">...</span></p>
     </tpl:EntryIf>
 
     <!-- # Entry without excerpt -->
@@ -124,7 +103,6 @@
       <tpl:Pagination>
         <p class="pagination"><tpl:PaginationIf end="0"><a href="{{tpl:PaginationURL offset="+1"}}" class="prev">&#171;
         {{tpl:lang previous entries}}</a> - </tpl:PaginationIf>
-
         {{tpl:lang page}} {{tpl:PaginationCurrent}} {{tpl:lang of}} {{tpl:PaginationCounter}}
         <tpl:PaginationIf start="0"> - <a href="{{tpl:PaginationURL offset="-1"}}" class="next">{{tpl:lang next entries}}
         &#187;</a></tpl:PaginationIf></p>
@@ -133,18 +111,4 @@
   </tpl:Entries>
 
 <div class="cleared"></div>
-
-</div> <!-- Closes Content -->
-
-{{tpl:include src="_sidebar.html"}}
-
-</div> <!-- Closes Main -->
-
-</div> <!-- End #wrapper -->
-
-{{tpl:include src="_footer.html"}}
-
-</div> <!-- End #page -->
-
-</body>
-</html>
+</tpl:Block>

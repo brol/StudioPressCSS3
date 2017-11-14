@@ -10,7 +10,7 @@
 
 if (!defined('DC_RC_PATH')) { return; }
 
-l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
+l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/public');
 
 # appel css menu
 $core->addBehavior('publicHeadContent','studiopresscss3menu_publicHeadContent');
@@ -23,8 +23,8 @@ function studiopresscss3menu_publicHeadContent($core)
 	}
 
 	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
-	echo '<link rel="stylesheet" type="text/css" media="projection, screen" href="'.$url."/css/menus/".$style.".css\" />\n";
-	echo '<!--[if lte IE 9]><link rel="stylesheet" type="text/css" media="projection, screen" href="'.$url."/css/ie9/".$style."-ie9.css\" /><![endif]-->\n";
+	echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/menus/".$style.".css\" />\n";
+	echo '<!--[if lte IE 9]><link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/ie9/".$style."-ie9.css\" /><![endif]-->\n";
 }
 
 # appel css couleur
@@ -39,7 +39,7 @@ function studiopresscss3color_publicHeadContent($core)
 
 	$url = $core->blog->settings->system->themes_url.'/'.$core->blog->settings->system->theme;
 	echo '<link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/colors/".$style.".css\" />\n";
-	echo '<!--[if lte IE 9]><link rel="stylesheet" type="text/css" media="projection, screen" href="'.$url."/css/ie9/".$style."-ie9.css\" /><![endif]-->\n";
+	echo '<!--[if lte IE 9]><link rel="stylesheet" type="text/css" media="screen" href="'.$url."/css/ie9/".$style."-ie9.css\" /><![endif]-->\n";
 }
 
 # appel css welcome
