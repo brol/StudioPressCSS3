@@ -11,12 +11,10 @@
 
 if (!defined('DC_CONTEXT_ADMIN')) { return; }
 
-global $core;
-
 //PARAMS
 
 # Translations
-l10n::set(dirname(__FILE__).'/locales/'.$_lang.'/main');
+l10n::set(__DIR__ . '/locales/' . dcCore::app()->lang . '/main');
 
 # Default values
 $default_menu = 'simplemenu';
@@ -27,12 +25,12 @@ $default_inserttop = false;
 $default_insertright = false;
 
 # Settings
-$my_menu = $core->blog->settings->themes->studiopresscss3_menu;
-$my_color = $core->blog->settings->themes->studiopresscss3_color;
-$my_welcome = $core->blog->settings->themes->studiopresscss3_welcome;
-$my_topstories = $core->blog->settings->themes->studiopresscss3_topstories;
-$my_inserttop = $core->blog->settings->themes->studiopresscss3_inserttop;
-$my_insertright = $core->blog->settings->themes->studiopresscss3_insertright;
+$my_menu = dcCore::app()->blog->settings->themes->studiopresscss3_menu;
+$my_color = dcCore::app()->blog->settings->themes->studiopresscss3_color;
+$my_welcome = dcCore::app()->blog->settings->themes->studiopresscss3_welcome;
+$my_topstories = dcCore::app()->blog->settings->themes->studiopresscss3_topstories;
+$my_inserttop = dcCore::app()->blog->settings->themes->studiopresscss3_inserttop;
+$my_insertright = dcCore::app()->blog->settings->themes->studiopresscss3_insertright;
 
 # Menu type
 $studiopresscss3_menu_combo = array(
@@ -50,7 +48,7 @@ $studiopresscss3_color_combo = array(
 );
 
 # Welcome
-$html_filewelcome = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-welcome.html';
+$html_filewelcome = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-welcome.html';
 
 if (!is_file($html_filewelcome) && !is_writable(dirname($html_filewelcome))) {
 	throw new Exception(
@@ -60,9 +58,9 @@ if (!is_file($html_filewelcome) && !is_writable(dirname($html_filewelcome))) {
 }
 
 # Top stories
-$html_filetopstories = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-topstories.html';
+$html_filetopstories = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-topstories.html';
 
-$topstories = $core->blog->settings->themes->studiopresscss3_topstories;
+$topstories = dcCore::app()->blog->settings->themes->studiopresscss3_topstories;
 
 if (!is_file($html_filetopstories) && !is_writable(dirname($html_filetopstories))) {
 	throw new Exception(
@@ -72,7 +70,7 @@ if (!is_file($html_filetopstories) && !is_writable(dirname($html_filetopstories)
 }
 
 # Insert top
-$html_filetop = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-inserttop.html';
+$html_filetop = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-inserttop.html';
 
 if (!is_file($html_filetop) && !is_writable(dirname($html_filetop))) {
 	throw new Exception(
@@ -82,7 +80,7 @@ if (!is_file($html_filetop) && !is_writable(dirname($html_filetop))) {
 }
 
 # Insert right
-$html_fileright = path::real($core->blog->themes_path).'/'.$core->blog->settings->system->theme.'/tpl/inc-insertright.html';
+$html_fileright = path::real(dcCore::app()->blog->themes_path).'/'.dcCore::app()->blog->settings->system->theme.'/tpl/inc-insertright.html';
 
 
 if (!is_file($html_fileright) && !is_writable(dirname($html_fileright))) {
@@ -98,7 +96,7 @@ if (!empty($_POST))
 {
 	try
 	{
-		$core->blog->settings->addNamespace('themes');
+		dcCore::app()->blog->settings->addNamespace('themes');
 
 		# Menu type
 		if (!empty($_POST['studiopresscss3_menu']) && in_array($_POST['studiopresscss3_menu'],$studiopresscss3_menu_combo))
@@ -110,7 +108,7 @@ if (!empty($_POST))
 			$my_menu = $default_menu;
 
 		}
-		$core->blog->settings->themes->put('studiopresscss3_menu',$my_menu,'string','Menu to display',true);
+		dcCore::app()->blog->settings->themes->put('studiopresscss3_menu',$my_menu,'string','Menu to display',true);
 
 		# Color scheme
 		if (!empty($_POST['studiopresscss3_color']) && in_array($_POST['studiopresscss3_color'],$studiopresscss3_color_combo))
@@ -123,7 +121,7 @@ if (!empty($_POST))
 			$my_color = $default_color;
 
 		}
-		$core->blog->settings->themes->put('studiopresscss3_color',$my_color,'string','Color display',true);
+		dcCore::app()->blog->settings->themes->put('studiopresscss3_color',$my_color,'string','Color display',true);
 
 		# Welcome
 		if (!empty($_POST['studiopresscss3_welcome']))
@@ -136,7 +134,7 @@ if (!empty($_POST))
 			$my_welcome = $default_welcome;
 
 		}
-		$core->blog->settings->themes->put('studiopresscss3_welcome',$my_welcome,'boolean', 'Display Welcome',true);
+		dcCore::app()->blog->settings->themes->put('studiopresscss3_welcome',$my_welcome,'boolean', 'Display Welcome',true);
 
 		if (isset($_POST['welcome']))
 		{
@@ -155,7 +153,7 @@ if (!empty($_POST))
 			$my_topstories = $default_topstories;
 
 		}
-		$core->blog->settings->themes->put('studiopresscss3_topstories',$my_topstories,'boolean', 'Display Top Stories',true);
+		dcCore::app()->blog->settings->themes->put('studiopresscss3_topstories',$my_topstories,'boolean', 'Display Top Stories',true);
 
 		if (isset($_POST['topstories']))
 		{
@@ -174,7 +172,7 @@ if (!empty($_POST))
 			$my_inserttop = $default_inserttop;
 
 		}
-		$core->blog->settings->themes->put('studiopresscss3_inserttop',$my_inserttop,'boolean', 'Display Insert Top',true);
+		dcCore::app()->blog->settings->themes->put('studiopresscss3_inserttop',$my_inserttop,'boolean', 'Display Insert Top',true);
 
 		if (isset($_POST['topinsert']))
 		{
@@ -192,7 +190,7 @@ if (!empty($_POST))
 			$my_insertright = $default_insertright;
 
 		}
-		$core->blog->settings->themes->put('studiopresscss3_insertright',$my_insertright,'boolean', 'Display Insert Right',true);
+		dcCore::app()->blog->settings->themes->put('studiopresscss3_insertright',$my_insertright,'boolean', 'Display Insert Right',true);
 
 		if (isset($_POST['rightinsert']))
 		{
@@ -202,16 +200,16 @@ if (!empty($_POST))
 		}
 
 		// Blog refresh
-		$core->blog->triggerBlog();
+		dcCore::app()->blog->triggerBlog();
 
 		// Template cache reset
-		$core->emptyTemplatesCache();
+		dcCore::app()->emptyTemplatesCache();
 
 		dcPage::success(__('Theme configuration has been successfully updated.'),true,true);
 	}
 	catch (Exception $e)
 	{
-		$core->error->add($e->getMessage());
+		dcCore::app()->error->add($e->getMessage());
 	}
 }
 

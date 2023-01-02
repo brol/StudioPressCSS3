@@ -7,17 +7,16 @@
 #   License : http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 #
 # ***** END LICENSE BLOCK *****
-
 if (!defined('DC_RC_PATH')) { return; }
 
 $this->registerModule(
-	/* Name */			    "StudioPressCSS3",
-	/* Description*/		"Trois colonnes fixes avec onglets en CSS3",
-	/* Author */			  "Pierre Van Glabeke",
-	/* Version */			  '0.8',
-	array(
-		'type'	 =>	'theme',
-		'tplset' => 'mustek',
-		'dc_min' => '2.15'
-	)
+    'StudioPressCSS3',
+    'Trois colonnes fixes avec onglets en CSS3',
+    'Pierre Van Glabeke',
+    '1.0',
+    [
+        'requires' => [['core', '2.24']],
+        'type'     => 'theme',
+        'tplset'   => 'mustek',
+    ]
 );
