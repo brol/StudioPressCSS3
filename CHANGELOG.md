@@ -1,8 +1,8 @@
-v1.0 - 02-01-2023 - Pierre Van Glabeke
+v1.0 - 02/01/2023 - Pierre Van Glabeke
 * modifs html
 * dc2.24 requis
 
-v0.8 - 27-11-2019 - Pierre Van Glabeke
+v0.8 - 27/11/2019 - Pierre Van Glabeke
 * modifs html
 * dc2.15 requis
 
