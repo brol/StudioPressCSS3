@@ -1,12 +1,14 @@
 <?php
-# ***** BEGIN LICENSE BLOCK *****
-#
-#  	StudioPressCSS3
-#  	Theme by Pierre Van Glabeke
-#   original WP theme: http://www.dailyblogtips.com/wordpress-themes
-#   License : http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# ***** END LICENSE BLOCK *****
+/**
+ * @brief StudioPressCSS3, a theme for Dotclear 2
+ *
+ * @package Dotclear
+ * @subpackage Theme
+ *
+ * @author Pierre Van Glabeke
+ * @original WP theme: https://www.dailyblogtips.com/wordpress-themes
+ * @copyright https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 if (!defined('DC_RC_PATH')) { return; }
 
 l10n::set(dirname(__FILE__) . '/locales/' . dcCore::app()->lang. '/public');
